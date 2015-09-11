@@ -1750,7 +1750,7 @@ $url = substr($current_url, strpos($current_url, "rss.php?")+12);
 // Create DOM from URL or file
 $html = file_get_html($url);
 
-$url1 = $url;
+$url1 = $url . "&FRST=1";
 $url2 = $url . "&FRST=11";
 $url3 = $url . "&FRST=21";
 
@@ -1770,7 +1770,7 @@ echo '<link>' . str_replace("&", "&amp;", $url) . '</link>';
 echo '<pubDate>' . date("d-m-Y") . '</pubDate>';
 echo '<generator>http://www.sudoc.abes.fr/</generator>';
 
-// Identifier et récupérer la liste des résultats
+// Identifier et rÃ©cupÃ©rer la liste des rÃ©sultats
 
 function sudoc2rss($source) 
  {
